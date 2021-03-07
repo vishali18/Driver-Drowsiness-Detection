@@ -91,5 +91,19 @@ The score is basically a value we will use to determine how long the person has 
                                         
 A threshold is defined for example if score becomes greater than 15 that means the person’s eyes are closed for a long period of time. This is when we beep the alarm using sound.play()
 
-# conclusion
+# Conclusion
 In this Python project, we have built a drowsy driver alert system that you can implement in numerous ways. We used OpenCV to detect faces and eyes using a haar cascade classifier and then we used a CNN model to predict the status.
+
+# Haar Cascade
+We will do face detection by using haar cascades.
+
+# What are Haar Cascades?
+Haar Cascade classifiers are an effective way for face detection. This method was proposed by Paul Viola and Michael Jones in their paper Rapid Object Detection using a Boosted Cascade of Simple Features .Haar Cascade is a machine learning-based approach where a lot of positive and negative images are used to train the classifier.
+
+Positive images – These images contain the images which we want our classifier to identify.
+
+Negative Images – Images of everything else, which do not contain the object we want to detect.
+
+# CNN (Convoluatioonal Neural Network)
+
+Convolutional neural networks works in a similar way to the Viola Jones method at least conceptually .So what is different? While both methods work in a series of steps, the steps in the Viola Jones method are set whereas the steps in CNNs are much less structured. CNN is good at capturing hierarchical and spatial data from images. It utilizes filters that look at regions of an input image with a defined window size and map it to some output. It then slides the window by some defined stride to other regions, covering the whole image. Each convolution filter layer thus captures the properties of this input image hierarchically in a series of subsequent layers, capturing the details like lines in image, then shapes, then whole objects in later layers. CNN can be a good fit to feed the images of a dataset and classify them into their respective classes.
