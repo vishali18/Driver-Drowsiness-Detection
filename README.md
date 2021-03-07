@@ -8,7 +8,7 @@ The objective of this intermediate Python project is to build a drowsiness detec
 
 we will be using OpenCV for gathering the images from webcam and feed them into a Deep Learning model which will classify whether the person’s eyes are ‘Open’ or ‘Closed’. The approach we will be using for this Python project is as follows :
 
-# Step 1 
+# Step 1
   Take image as input from a camera.
 
 # Step 2 
@@ -36,9 +36,13 @@ The model we used is built with Keras using Convolutional Neural Networks (CNN).
 The CNN model architecture consists of the following layers:
 
 Convolutional layer; 32 nodes, kernel size 3
+
 Convolutional layer; 32 nodes, kernel size 3
+
 Convolutional layer; 64 nodes, kernel size 3
+
 Fully connected layer; 128 nodes
+
 The final layer is also a fully connected layer with 2 nodes. In all the layers, a Relu activation function is used except the output layer in which we used Softmax.
 
 # Prerequisites
@@ -58,8 +62,8 @@ With a webcam, we will take images as input. So to access the webcam, we made an
 
 To detect the face in the image, we need to first convert the image into grayscale as the OpenCV algorithm for object detection takes gray images in the input. We don’t need color information to detect the objects. We will be using haar cascade classifier to detect faces. This line is used to set our classifier face = cv2.CascadeClassifier(‘ path to our haar cascade xml file’). Then we perform the detection using faces = face.detectMultiScale(gray). It returns an array of detections with x,y coordinates, and height, the width of the boundary box of the object. Now we can iterate over the faces and draw boundary boxes for each face.
 
-# for (x,y,w,h) in faces: 
- # cv2.rectangle(frame, (x,y), (x+w, y+h), (100,100,100), 1 )
+# for (x,y,w,h) in faces: cv2.rectangle(frame, (x,y), (x+w, y+h), (100,100,100), 1 )
+
 # Step 3 – Detect the eyes from ROI and feed it to the classifier
 
 The same procedure to detect faces is used to detect eyes. First, we set the cascade classifier for eyes in leye and reye respectively then detect the eyes using left_eye = leye.detectMultiScale(gray). Now we need to extract only the eyes data from the full image. This can be achieved by extracting the boundary box of the eye and then we can pull out the eye image from the frame with this code.
