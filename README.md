@@ -104,6 +104,6 @@ Positive images – These images contain the images which we want our classifier
 
 Negative Images – Images of everything else, which do not contain the object we want to detect.
 
-# CNN (Convoluatioonal Neural Network)
+# CNN (Convolutional Neural Network)
 
 Convolutional neural networks works in a similar way to the Viola Jones method at least conceptually .So what is different? While both methods work in a series of steps, the steps in the Viola Jones method are set whereas the steps in CNNs are much less structured. CNN is good at capturing hierarchical and spatial data from images. It utilizes filters that look at regions of an input image with a defined window size and map it to some output. It then slides the window by some defined stride to other regions, covering the whole image. Each convolution filter layer thus captures the properties of this input image hierarchically in a series of subsequent layers, capturing the details like lines in image, then shapes, then whole objects in later layers. CNN can be a good fit to feed the images of a dataset and classify them into their respective classes.
